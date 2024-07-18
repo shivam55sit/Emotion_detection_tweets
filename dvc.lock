@@ -31,3 +31,21 @@ stages:
       md5: cfbadb42bdeea226344dd7fd1070b0a7.dir
       size: 825864
       nfiles: 2
+  build_features:
+    cmd: python3 src/features/build_features.py
+    deps:
+    - path: data/processed
+      hash: md5
+      md5: cfbadb42bdeea226344dd7fd1070b0a7.dir
+      size: 825864
+      nfiles: 2
+    - path: src/features/build_features.py
+      hash: md5
+      md5: 31d16b6454fefa497eb8ea895019d977
+      size: 1176
+    outs:
+    - path: data/features
+      hash: md5
+      md5: 6a89a5cd53d4aab20fadaf3ebb77bb99.dir
+      size: 1476037
+      nfiles: 2
