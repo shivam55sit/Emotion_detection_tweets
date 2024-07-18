@@ -19,3 +19,10 @@ stages:
     - src/features/build_features.py
     outs:
     - data/features
+  train_model:
+    cmd: python3 src/models/train_model.py
+    deps:
+    - data/features
+    - src/models/train_model.py
+    outs:
+    - model.pkl
