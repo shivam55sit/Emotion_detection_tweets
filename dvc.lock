@@ -66,3 +66,19 @@ stages:
       hash: md5
       md5: db4af8554a4ab3e579bb4117efb3d8e2
       size: 70184
+  predict_model:
+    cmd: python3 src/models/predict_model.py
+    deps:
+    - path: model.pkl
+      hash: md5
+      md5: db4af8554a4ab3e579bb4117efb3d8e2
+      size: 70184
+    - path: src/models/predict_model.py
+      hash: md5
+      md5: 36e9126fe15c726532a0e582d55e1ea6
+      size: 823
+    outs:
+    - path: metrics.json
+      hash: md5
+      md5: 28c9cf017e58ad94b95fe192c85895dd
+      size: 139

@@ -26,3 +26,10 @@ stages:
     - src/models/train_model.py
     outs:
     - model.pkl
+  predict_model:
+    cmd: python3 src/models/predict_model.py
+    deps:
+    - model.pkl
+    - src/models/predict_model.py
+    metrics:
+    - metrics.json
